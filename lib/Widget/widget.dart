@@ -11,7 +11,7 @@ Widget brandname() {
 }
 
 
-Widget wallpapersList({required List<WallpaperModel> wallpapers, context}) {
+Widget wallpapersList({@required List<WallpaperModel> wallpapers, context}) {
   return Container(
     padding: EdgeInsets.symmetric(horizontal: 16),
     child: GridView.count(

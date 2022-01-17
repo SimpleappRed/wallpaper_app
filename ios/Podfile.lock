@@ -1,0 +1,43 @@
+PODS:
+  - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - path_provider_ios (0.0.1):
+    - Flutter
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
+  - wallpaper_manager (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - wallpaper_manager (from `.symlinks/plugins/wallpaper_manager/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
+  wallpaper_manager:
+    :path: ".symlinks/plugins/wallpaper_manager/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  path_provider_ios: caac022071b086febf1890008bb1e7c88207fdcc
+  sqflite: 12301fb38ad5dba0c8c77585369b445acf43696f
+  wallpaper_manager: a4fc118537e03da94799ba8d04f6015b84b041ac
+
+PODFILE CHECKSUM: 8f0d2258d07e3e626e45bf19cc1ff597cd33373b
+
+COCOAPODS: 1.11.2

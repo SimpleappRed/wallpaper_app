@@ -34,11 +34,7 @@ class _HomeState extends State<Home> {
     jsonData["photos"].forEach((element) {
       //print(element);
       WallpaperModel wallpaperModel =WallpaperModel(
-        url: jsonData["url"],
-        photographer: jsonData["photographer"],
-        photographerId: jsonData["photographer_id"],
-        photographerUrl: jsonData["photographer_url"],
-        src: SrcModel.fromMap(jsonData["src"]));
+      );
       wallpaperModel = WallpaperModel.fromMap(element);
       wallpapers.add(wallpaperModel);
       //print(photosModel.toString()+ "  "+ photosModel.src.portrait);
@@ -133,7 +129,7 @@ class _HomeState extends State<Home> {
 class CategoriesTile extends StatelessWidget {
   final String imgUrl, title;
 
-  CategoriesTile({Key? key, required this.imgUrl, required this.title});
+  CategoriesTile({Key key, @required this.imgUrl, @required this.title});
 
   @override
   Widget build(BuildContext context) {

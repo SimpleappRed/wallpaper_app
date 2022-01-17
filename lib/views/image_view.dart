@@ -1,9 +1,15 @@
-import 'dart:convert';
-import 'dart:io';
-import 'dart:typed_data';
+// import 'dart:convert';
+// import 'dart:io';
+// import 'dart:typed_data';
 // import 'package:flutter/foundation.dart';
 
+// import 'package:dio/dio.dart';
+// import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+// import 'package:image_gallery_saver/image_gallery_saver.dart';
+// import 'package:permission_handler/permission_handler.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:wallpaper_manager/wallpaper_manager.dart';
+
 
 
 import 'package:flutter/material.dart';
@@ -15,11 +21,11 @@ import 'package:flutter/material.dart';
 
 
 import 'package:wallpaper_app/model/wallpaper_model.dart';
-import 'package:wallpaper_manager/wallpaper_manager.dart';
+// import 'package:wallpaper_manager/wallpaper_manager.dart';
 class ImageView extends StatefulWidget {
   final String imgUrl;
 
-  ImageView({required this.imgUrl});
+  ImageView({@required this.imgUrl});
 
   @override
   _ImageViewState createState() => _ImageViewState();
@@ -27,6 +33,7 @@ class ImageView extends StatefulWidget {
 
 class _ImageViewState extends State<ImageView> {
   var filePath;
+  // var imgPath;
    Future<void>  setwallpaper() async {
     int location = WallpaperManager.HOME_SCREEN;
     var file = await DefaultCacheManager().getSingleFile(widget.imgUrl);
@@ -69,7 +76,7 @@ class _ImageViewState extends State<ImageView> {
                       setwallpaper();
                         // _save();
                     
-                      //Navigator.pop(context);
+                      Navigator.pop(context);
                     },
                     child: Stack(
                       children: <Widget>[
@@ -146,11 +153,8 @@ class _ImageViewState extends State<ImageView> {
     );
   }
 
-//   _save() async {
-//     if(Platform.isAndroid){
-//  await _askPermission();
-//     }
-   
+// save() async {
+//     await _askPermission();
 //     var response = await Dio().get(widget.imgUrl,
 //         options: Options(responseType: ResponseType.bytes));
 //     final result =
@@ -159,14 +163,34 @@ class _ImageViewState extends State<ImageView> {
 //     Navigator.pop(context);
 //   }
 
-//  _askPermission()  {
+//   _askPermission() async {
 //     if (Platform.isIOS) {
-//       /*Map<PermissionGroup, PermissionStatus> permissions =
-//           */PermissionHandler()
+//       Map<PermissionGroup, PermissionStatus> permissions =
+//           await PermissionHandler()
 //               .requestPermissions([PermissionGroup.photos]);
 //     } else {
-//      /* PermissionStatus permission = */ PermissionHandler()
+//      PermissionStatus permission = await PermissionHandler()
 //           .checkPermissionStatus(PermissionGroup.storage);
 //     }
 //   }
+  // _save() async {
+  //   await _askPermission();
+  //   var response = await Dio().get(widget.imgUrl,
+  //       options: Options(responseType: ResponseType.bytes));
+  //   final result =
+  //       await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+  //   print(result);
+  //   Navigator.pop(context);
+  // }
+
+  // _askPermission() async {
+  //   if (Platform.isIOS) {
+  //     /*Map<PermissionGroup, PermissionStatus> permissions =
+  //         */await PermissionHandler()
+  //             .requestPermissions([PermissionGroup.photos]);
+  //   } else {
+  //    /* PermissionStatus permission = */await PermissionHandler()
+  //         .checkPermissionStatus(PermissionGroup.storage);
+  //   }
+  // }
 }

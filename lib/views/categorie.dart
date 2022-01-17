@@ -7,7 +7,7 @@ import 'package:wallpaper_app/model/wallpaper_model.dart';
 class Catagory extends StatefulWidget {
  
  final String categorieName;
- Catagory({required this.categorieName});
+ Catagory({@required this.categorieName});
   @override
   _CatagoryState createState() => _CatagoryState();
 }
@@ -33,11 +33,7 @@ class _CatagoryState extends State<Catagory> {
     jsonData["photos"].forEach((element) {
       //print(element);
       WallpaperModel wallpaperModel = WallpaperModel(
-        url: jsonData["url"],
-        photographer: jsonData["photographer"],
-        photographerId: jsonData["photographer_id"],
-        photographerUrl: jsonData["photographer_url"],
-        src: SrcModel.fromMap(jsonData["src"]));;
+       );
       wallpaperModel = WallpaperModel.fromMap(element);
       wallpapers.add(wallpaperModel);
       //print(photosModel.toString()+ "  "+ photosModel.src.portrait);

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/home.dart';
 
-void main() async{
+void main() {
   runApp(Myapp());
 
 }

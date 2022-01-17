@@ -9,7 +9,7 @@ import 'package:wallpaper_app/model/wallpaper_model.dart';
 class Search extends StatefulWidget {
     String searchquery;
 
-  Search({required this.searchquery});
+  Search({@required this.searchquery});
 
   @override
   _SearchState createState() => _SearchState();
